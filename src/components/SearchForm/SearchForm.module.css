@@ -1,0 +1,44 @@
+.searchForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 8px 8px 20px;
+    background-color: var(--bg-content);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+.inputGroup{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1; /* جعل الحقل يأخذ كل المساحة المتبقية */
+}
+.searchIcon{
+    width: 18px;
+    height: 18px;
+}
+.searchInput{
+    width: 100%; /*****هااااااام جدا***/
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 12px;
+}
+.submitBtn{
+    border: none;
+    color: #fff;
+    background-color: var(--clr-primary-blue);
+    padding: 10px 15px; 
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+    background-color: var(--btn-hover);
+}

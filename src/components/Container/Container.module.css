@@ -1,0 +1,26 @@
+.container{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    
+    /* width: 100%;
+    max-width: 730px;
+    min-height: 100vh;
+    padding: 0 24px; 
+    background-color: var(--bg-main); */
+
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    /* إلغاء align-items: center لكي تتمدد المكونات تلقائياً لـ 100% من العرض */
+    align-items: stretch;
+    width: 100%;
+    max-width: 730px;
+    margin: 0 auto; /* لتوسيط التطبيق في منتصف الشاشة أفقياً */
+    gap: 24px; /* مسافة رأسية ثابتة بين المكونات */
+    padding: 40px;
+}

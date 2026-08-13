@@ -1,0 +1,16 @@
+
+
+
+
+
+
+/* 2. تطبيق لون الخلفية وتوسيط الحاوية على مستوى الشاشة الكلية */
+.app-container {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace, sans-serif;
+}

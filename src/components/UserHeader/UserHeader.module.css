@@ -1,0 +1,39 @@
+/* .userHeader{} */
+.userInfo{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.userTitles{
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+}
+.name{
+    font-size: 22px; 
+    color: var(--text-main);
+}
+.username{
+    color: var(--text-accent); 
+    font-size: 13px;
+}
+.joinedDate{
+    color: var(--text-secondary); 
+    font-size: 13px;
+}
+.bio{
+    color: var(--text-secondary); 
+    font-size: 13px; 
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+@media (max-width: 767px){
+    .userInfo{
+        flex-direction: column;
+    }
+    .joinedDate{
+        margin-top: 8px;
+    }
+}

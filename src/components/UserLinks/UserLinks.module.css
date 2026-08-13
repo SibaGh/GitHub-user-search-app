@@ -1,0 +1,23 @@
+.links{
+    display: grid;
+    grid-template-columns: 1fr; /* عمود واحد للموبايل */
+    gap: 16px;
+    color: var(--text-main);
+}
+.links li{
+    list-style: none;
+}
+.linkItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.disabled{
+    color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+    .links{
+        grid-template-columns: repeat(2, 1fr); /* عودة الروابط لعمودين متجاورين */
+    }
+}

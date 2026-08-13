@@ -1,0 +1,26 @@
+.stats{
+    background-color: var(--bg-main);
+    padding: 18px 24px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-main);
+    margin-top: 10px;
+}
+
+.statItem{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.statTitle{
+    font-size: 11px;
+    color: var(--text-secondary); 
+    margin-bottom: 5px;
+}
+.statValue{
+    font-size: 18px;
+    color: var(--text-main);
+}

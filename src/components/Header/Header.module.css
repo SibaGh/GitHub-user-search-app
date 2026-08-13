@@ -1,0 +1,31 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* دفع العنون والزر للطرفين */
+    width: 100%;
+}
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+.themeBtn{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+.themeText{
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    font-size: 10px;
+    color: var(--text-main);
+}
+.themeIcon{
+    width: 14px;
+    height: auto;
+}
