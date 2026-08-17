@@ -4,23 +4,23 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
+    /* توزيع العناصر بمسافات متساوية */
     justify-content: space-between;
     color: var(--text-main);
-    margin-top: 10px;
 }
 
 .statItem{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    gap: 8px;
 }
 
 .statTitle{
     font-size: 11px;
     color: var(--text-secondary); 
-    margin-bottom: 5px;
 }
 .statValue{
     font-size: 18px;
+    font-weight: bold;
     color: var(--text-main);
 }

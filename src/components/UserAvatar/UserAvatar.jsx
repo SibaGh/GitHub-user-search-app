@@ -1,9 +1,10 @@
 import styles from './UserAvatar.module.css'
 
-const UserAvatar = () => {
+const UserAvatar = ({avatarUrl, username}) => {
     return (
-        <img src="/assets/images/octocat.png" 
-            alt="User avatar" 
+        <img 
+            src= {avatarUrl || "/assets/images/octocat.png" }
+            alt={`${username || 'User'} avatar`}
             className={styles.avatar}
         />
     )

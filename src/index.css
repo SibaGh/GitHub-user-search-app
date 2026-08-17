@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-
-*{
+/* 1. Reset أساسي وضبط الخط للكل */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Space Mono", monospace;
 }
 
-/* 1. Primitive Tokens (الألوان الثابتة التي لا تتغير بتغير الثيم) */
+/* 2. Primitive Tokens (الألوان الثابتة) */
 :root {
   --clr-primary-blue: hsl(212, 100%, 50%);
   --clr-primary-hover: hsl(212, 100%, 69%);
   --clr-error-red: hsl(0, 91%, 62%);
+  --ff-space-mono: 'Space Mono', monospace;
 }
 
-/* 2. Semantic Tokens - Dark Theme (الوضع الافتراضي) */
-:root,
-[data-theme="dark"] {
+/* 3. Semantic Tokens - Dark Theme (الوضع الافتراضي) */
+body,
+body[data-theme="dark"] {
   /* الخلفيات */
   --bg-main: hsl(220, 40%, 13%);
   --bg-content: hsl(222, 41%, 20%);
@@ -37,15 +37,31 @@
   --box-shadow: none;
 }
 
-/* 3. Semantic Tokens - Light Theme (تغيير القيم الدلالية فقط) */
-[data-theme="light"] {
+/* 4. Semantic Tokens - Light Theme */
+body[data-theme="light"] {
   --bg-main: hsl(227, 100%, 98%);
   --bg-content: hsl(0, 0%, 100%);
   --bg-stat: hsl(227, 100%, 98%);
 
-  /* لون داكن عالي التباين للنص الرئيسي في الوضع الفاتح */
   --text-main: hsl(217, 21%, 21%);
   --text-secondary: hsl(217, 20%, 51%);
 
   --box-shadow: 0px 16px 30px -10px hsla(227, 46%, 50%, 0.2);
+}
+
+/* 5. تطبيق الخلفية الشاملة والانتقال السلس على body */
+body {
+  font-family: var(--ff-space-mono);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 6. توسيط الحاوية داخل الشاشة */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

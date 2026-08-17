@@ -1,18 +1,4 @@
 .container{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center;
-    align-items: center; */
-    
-    /* width: 100%;
-    max-width: 730px;
-    min-height: 100vh;
-    padding: 0 24px; 
-    background-color: var(--bg-main); */
-
-
-
-
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -23,4 +9,34 @@
     margin: 0 auto; /* لتوسيط التطبيق في منتصف الشاشة أفقياً */
     gap: 24px; /* مسافة رأسية ثابتة بين المكونات */
     padding: 40px;
+}
+
+/* 1. حالة التحميل (Loading State) */
+.loading {
+    background-color: var(--bg-content);
+    color: var(--text-main);
+    padding: 32px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+}
+
+/* 2. حالة الخطأ (Error State) */
+.error {
+    background-color: var(--bg-content);
+    color: var(--clr-error-red);
+    padding: 32px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 16px;
+    }
 }

@@ -26,6 +26,8 @@
     background: transparent;
     color: var(--text-main);
     font-size: 12px;
+    direction: ltr;    /* يضمن كتابة أسماء المستخدمين من اليسار لليمين */
+    text-align: left;  /* يثبت النص بجانب الأيقونة على اليسار */
 }
 .submitBtn{
     border: none;
@@ -41,4 +43,12 @@
 
 .submitBtn:hover {
     background-color: var(--btn-hover);
+}
+
+.errorText {
+    color: var(--clr-error-red);
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 16px;
+    white-space: nowrap;
 }

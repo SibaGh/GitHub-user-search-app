@@ -12,8 +12,30 @@
     align-items: center;
     gap: 10px;
 }
+
+/* 1. تحويل لون الأيقونات للأبيض النقي في الوضع الداكن */
+:global(body[data-theme="dark"]) .linkItem img {
+    filter: brightness(0) invert(1);
+}
+
+/* 2. جعل النص والأيقونة باهتين معاً عندما يكون العنصر غير متاح */
 .disabled{
     color: var(--text-secondary);
+    opacity: 0.7; /* تخفيض شفافية النص والأيقونة معاً */
+}
+
+/* 3. إلغاء التوهج الأبيض عن الأيقونة الباهتة في الوضع الداكن لتبقى متناسقة */
+:global(body[data-theme="dark"]) .disabled img {
+    filter: none;
+}
+
+.linkItem a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.linkItem a:hover {
+    text-decoration: underline;
 }
 
 @media (min-width: 768px) {

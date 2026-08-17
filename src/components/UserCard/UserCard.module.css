@@ -1,56 +1,59 @@
-/* 1. التنسيق الأساسي للشاشات الصغيرة (Mobile First) */
-.card{
+/* --- الموبايل (Mobile First) --- */
+.card {
     background-color: var(--bg-content);
     border-radius: 15px;
-    box-shadow: var(--box-shadow);
     padding: 24px;
-
-
-
-    display: grid;
-    grid-template-columns: 70px 1fr; /* 70px للصورة والباقي لعنوان المستخدم */
-    column-gap: 20px;
-    row-gap: 24px;
-    align-items: center;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-    /* في الموبايل: الصورة تأخذ العمود الأول والهيدر يأخذ العمود الثاني */
-    .card > :nth-child(1) {
-        grid-column: 1;
-        grid-row: 1;
-    }
+.topSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-    .card > :nth-child(2) {
-        grid-column: 2;
-        grid-row: 1;
-    }
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
 
-    /* في الموبايل: الإحصائيات والروابط تمتد على كامل عرض الكرت */
-    .card > :nth-child(3),
-    .card > :nth-child(4) {
-        grid-column: 1 / -1;
-    }
+.bio {
+    color: var(--text-main);
+    font-size: 13px;
+    line-height: 25px;
+    opacity: 0.75;
+}
 
-    /* --- 2. التنسيق للشاشات الكبيرة (Desktop) --- */
-    @media (min-width: 768px) {
+
+/* --- الشاشات الكبيرة (Desktop) --- */
+@media (min-width: 768px) {
     .card {
         padding: 48px;
-        grid-template-columns: 117px 1fr; /* زيادة حجم الصورة إلى 117px */
+        display: grid;
+        grid-template-columns: 117px 1fr;
         column-gap: 37px;
-        row-gap: 16px;
-        align-items: start;
+        row-gap: 20px;
     }
 
-    /* الصورة تثبت في العمود الأول وتأخذ ارتفاع الصفوف الأولى */
-    .card > :nth-child(1) {
-        grid-column: 1;
-        grid-row: 1 / 3;
+    .topSection {
+        display: contents; /* يفكك الحاوية في الديسكتاوب */
     }
 
-    /* باقي المكونات (Header, Stats, Links) تنتقل جميعها للعمود الثاني */
-    .card > :nth-child(2),
-    .card > :nth-child(3),
-    .card > :nth-child(4) {
+    /* 1. إجبار كافة عناصر الـ Grid على النزول في العمود الثاني */
+    .card > *,
+    .topSection > * {
         grid-column: 2;
+    }
+
+    /* 2. استثناء الصورة لتثبيت مكانها في العمود الأول على مدى صفين */
+    .avatar {
+        width: 117px;
+        height: 117px;
+        grid-column: 1 !important;
+        grid-row: 1 / 3;
     }
 }
