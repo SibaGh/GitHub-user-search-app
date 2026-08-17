@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import SearchForm from '../SearchForm/SearchForm'
 import UserCard from '../UserCard/UserCard'
-// import GithubCard from '../GithubCard/GithubCard'
 import styles from './Container.module.css'
 
 
@@ -57,9 +56,6 @@ const Container = () => {
 
             {/* عرض واجهة التحميل */}
             {isLoading && <div className={styles.loading}>Loading user data...</div>}
-
-            {/* عرض رسالة الخطأ */}
-            {/* {error && !isLoading && <div className={styles.error}>No user found with this name.</div>} */}
 
             {/* يُرسم الكرت فقط بعد نجاح جلب البيانات */}
             {/* عرض بيانات المستخدم عند النجاح */}
