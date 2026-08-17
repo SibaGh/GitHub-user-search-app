@@ -22,12 +22,13 @@ Make sure you have **Node.js** installed on your machine.
 
 ### Installation
 
+### Installation
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/SibaGh/GitHub-user-search-app.git
 
-
-   ---
+---
 
 ## 👤 Author
 
